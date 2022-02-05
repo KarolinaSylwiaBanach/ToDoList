@@ -1,0 +1,14 @@
+<h2>Edit task: {{todo.title}} <small>{{todo.id}}</small></h2>
+<form method="POST" action="/todo/{{todo.id}}?_method=PUT">
+    <label>
+        <p>
+            Title:
+        </p>
+        <p>
+            <input type="text" name="name" value="{{todo.title}}" >
+        </p>
+    </label>
+    <p>
+        <button type="submint">Save</button>
+    </p>
+</form>

@@ -1,0 +1,40 @@
+
+<table>
+    <thead>
+    <tr>
+        <th>
+            id
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each todos}}
+        <tr>
+            <th>
+                {{this.id}}
+            </th>
+            <td>
+                <a href="/todo/{{this.title}}">{{this.title}}</a>
+            </td>
+            <td>
+                <a href="/todo/{{this.id}}">Szczegóły</a>
+                <form method="post"
+                      action="/todo/{{this.id}}?_method=DELETE">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+<p>
+<form method="GET" action="/todo/form/add">
+    <button type="submit">Add task</button>
+</form>
+</p>

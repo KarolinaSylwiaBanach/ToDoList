@@ -1,0 +1,30 @@
+
+<h2>{{todos.title}}</h2>
+<table class="header-of-left">
+    <tbody>
+    <tr>
+        <th>
+            Id
+        </th>
+        <td>
+            {{todos.id}}
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Title
+        </th>
+        <td>
+            {{todos.title}}
+        </td>
+    </tr>
+    </tbody>
+</table>
+<p>
+<form method="GET" action="/todo/form/edit/{{todos.id}}">
+    <button type="submit">Edit task</button>
+</form>
+</p>
+<p>
+    {{>go-to-list}}
+</p>
